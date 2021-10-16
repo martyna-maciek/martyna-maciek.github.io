@@ -1,13 +1,19 @@
-import FadeIn from "react-fade-in";
+import Fade from "react-reveal/Fade";
+
+const BASE_DELAY = 100;
+export const REST_DELAY = BASE_DELAY + 1000;
 
 const Date = () => {
   return (
     <div className="section c-dateSec">
-      <FadeIn delay={200} transitionDuration={600}>
+      <Fade delay={REST_DELAY}>
         <h1 className="-f18 -mb24">Martyna + Maciek</h1>
-
-        <div className="c-dateSec_date -pt150 -pb74 -mb24">
+      </Fade>
+      <div className="c-dateSec_date -pt150 -pb74 -mb24">
+        <Fade delay={REST_DELAY}>
           <img src="/images/plant.png" />
+        </Fade>
+        <Fade delay={BASE_DELAY}>
           <h2 className="-f48 ">
             08
             <br />
@@ -15,8 +21,10 @@ const Date = () => {
             <br />
             2022
           </h2>
-        </div>
+        </Fade>
+      </div>
 
+      <Fade delay={REST_DELAY}>
         <h2 className="-f24 -mb8">Będzie ślub!</h2>
         <p className="-f14">szczegóły wkrótce</p>
 
@@ -28,7 +36,7 @@ const Date = () => {
         >
           <span className="c-btn_label">dodaj do kalendarza</span>
         </a>
-      </FadeIn>
+      </Fade>
     </div>
   );
 };
