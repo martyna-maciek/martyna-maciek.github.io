@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
@@ -15,8 +14,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Save the date baby!</h1>
 
-        {/* image example */}
-        <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
       </main>
     </div>
   );
