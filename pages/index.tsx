@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       <Head>
         <title>💒 💍 💮</title>
         <meta name="description" content="Save the date kochani!" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
