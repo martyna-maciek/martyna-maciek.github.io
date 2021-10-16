@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && yarn post-build",
-    "post-build": "mv ./out/_next ./out/next && replace '_next/' 'next/' ./out/*.html",
+    "build": "next build && next export",
     "publish-page": "yarn build && gh-pages --dist 'out' --branch 'gh-pages'",
     "start": "next start",
     "lint": "next lint"
@@ -24,7 +23,6 @@
     "eslint": "8.0.1",
     "eslint-config-next": "11.1.2",
     "gh-pages": "^3.2.3",
-    "replace": "^1.2.1",
     "typescript": "4.4.4"
   }
 }
