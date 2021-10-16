@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "publish-page": "yarn build && gh-pages --dist 'out' --branch 'gh-pages'",
+    "publish-page": "yarn build && gh-pages --dist 'out' --branch 'gh-pages' -t true",
     "start": "next start",
     "lint": "next lint"
   },
