@@ -6,7 +6,7 @@ import Text from "../components/text";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="container">
       <Head>
         <title>💒 💍 💮</title>
         <meta name="description" content="Save the date kochani!" />
@@ -20,9 +20,15 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="main">
-        <Date />
-        <Text />
-        <Calendar />
+        <div className="row">
+          <div className="col">
+            <Date />
+          </div>
+          <div className="col">
+            <Text />
+            <Calendar />
+          </div>
+        </div>
       </main>
     </div>
   );
