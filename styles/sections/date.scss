@@ -11,6 +11,9 @@
       height: 50px;
       content: "";
       background-color: $color_gold;
+      opacity: 0;
+      transform: scaleY(0);
+      animation: fadeIn 500ms 900ms forwards;
     }
 
     &::before {

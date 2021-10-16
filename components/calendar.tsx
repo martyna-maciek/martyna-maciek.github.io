@@ -1,9 +1,13 @@
-import FadeIn from "react-fade-in";
+import Fade from "react-reveal/Fade";
+import { useMobile } from "../hooks/useMobile";
+import { REST_DELAY } from "./date";
 
 const Calendar = () => {
+  const isMobile = useMobile();
+
   return (
     <div className="section c-calendarSec -pt80">
-      <FadeIn delay={200} transitionDuration={600}>
+      <Fade delay={isMobile ? 300 : REST_DELAY}>
         <p className="-f14 -mb16">Wrzesień 2022</p>
         <table>
           <tbody>
@@ -67,7 +71,7 @@ const Calendar = () => {
             </tr>
           </tbody>
         </table>
-      </FadeIn>
+      </Fade>
     </div>
   );
 };

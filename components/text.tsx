@@ -1,11 +1,17 @@
-import FadeIn from "react-fade-in";
+import Fade from "react-reveal/Fade";
+import { useMobile } from "../hooks/useMobile";
+import { REST_DELAY } from "./date";
 
 const Text = () => {
+  const isMobile = useMobile();
+
   return (
     <div className="section c-textSec -pt80sm -pt0">
-      <FadeIn delay={200} transitionDuration={600}>
+      <Fade delay={REST_DELAY}>
         <p className="-f14">Save the date!</p>
         <hr />
+      </Fade>
+      <Fade delay={isMobile ? 200 : REST_DELAY}>
         <p className="-f14 -mb16">
           Prosimy zarezerwujcie datę <br /> 8 września 2022 roku (czwartek).
         </p>
@@ -17,7 +23,7 @@ const Text = () => {
         <p className="-f14">
           Szczegółowe informacje przekażemy <br /> w późniejszym terminie.
         </p>
-      </FadeIn>
+      </Fade>
     </div>
   );
 };
