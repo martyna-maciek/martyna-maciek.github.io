@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Calendar from "../components/calendar";
 import Date from "../components/date";
+import Text from "../components/text";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
 
       <main className="main">
         <Date />
+        <Text />
+        <Calendar />
       </main>
     </div>
   );

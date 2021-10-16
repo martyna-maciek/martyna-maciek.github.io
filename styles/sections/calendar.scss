@@ -1,0 +1,38 @@
+.c-calendarSec {
+  table {
+    th,
+    td {
+      width: 40px;
+      height: 40px;
+      font-size: 10px;
+    }
+    th {
+      font-size: 12px;
+      font-weight: 300;
+    }
+
+    .c-wedding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      margin: auto;
+      background-color: rgba($color_gold, 0.5);
+      border-radius: 50%;
+      transition: background-color 200ms ease-in;
+
+      &:hover {
+        background-color: rgba($color_gold, 0.6);
+      }
+
+      &:active {
+        background-color: rgba($color_gold, 0.7);
+      }
+
+      img {
+        width: 16px;
+      }
+    }
+  }
+}
