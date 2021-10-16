@@ -48,6 +48,9 @@ p {
           height: 80px;
           content: "";
           background-color: $color_gold;
+          opacity: 0;
+          transform: scaleY(0);
+          animation: fadeIn 500ms 900ms forwards;
         }
       }
     }
@@ -90,4 +93,16 @@ hr {
 
   border: 0;
   border-top: 1px solid $color_gold;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
