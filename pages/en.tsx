@@ -1,29 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useLayoutEffect } from "react";
 import Calendar from "../components/calendar";
 import Date from "../components/date";
 import Text from "../components/text";
 
 const Home: NextPage = () => {
-  useLayoutEffect(() => {
-    const body = document.querySelector("body");
-
-    if (body) {
-      body.style.opacity = "1";
-    }
-  }, []);
-
   return (
     <div className="container">
       <Head>
-        <style>
-          {`body {
-            opacity: 0;
-          }`}
-        </style>
         <title>💒 💍 💮</title>
-        <meta name="description" content="Save the date kochani!" />
+        <meta name="description" content="Save the date!" />
         <link rel="icon" href="./images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -36,11 +22,11 @@ const Home: NextPage = () => {
       <main className="main">
         <div className="row">
           <div className="col">
-            <Date lang="pl" />
+            <Date lang="en" />
           </div>
           <div className="col">
-            <Text lang="pl" />
-            <Calendar lang="pl" />
+            <Text lang="en" />
+            <Calendar lang="en" />
           </div>
         </div>
       </main>
