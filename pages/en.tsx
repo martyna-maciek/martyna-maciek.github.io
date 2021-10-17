@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <div className="container">
       <Head>
         <title>💒 💍 💮</title>
-        <meta name="description" content="Save the date kochani!" />
+        <meta name="description" content="Save the date!" />
         <link rel="icon" href="./images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,11 +22,11 @@ const Home: NextPage = () => {
       <main className="main">
         <div className="row">
           <div className="col">
-            <Date lang="pl" />
+            <Date lang="en" />
           </div>
           <div className="col">
-            <Text lang="pl" />
-            <Calendar lang="pl" />
+            <Text lang="en" />
+            <Calendar lang="en" />
           </div>
         </div>
       </main>

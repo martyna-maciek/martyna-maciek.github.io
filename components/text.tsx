@@ -2,7 +2,26 @@ import Fade from "react-reveal/Fade";
 import { useMobile } from "../hooks/useMobile";
 import { REST_DELAY } from "./date";
 
-const Text = () => {
+const texts = {
+  pl: {
+    first: "Prosimy zarezerwujcie datę\n 8 września 2022 roku (czwartek).",
+    second: "Tego dnia powiemy sobie\n sakramentalne TAK!",
+    third: "Martyna i Maciek",
+    fourth: "Szczegółowe informacje przekażemy\n w późniejszym terminie.",
+  },
+  en: {
+    first: "Prosimy zarezerwujcie datę\n 8 września 2022 roku (czwartek).",
+    second: "Tego dnia powiemy sobie\n sakramentalne TAK!",
+    third: "Martyna i Maciek",
+    fourth: "Szczegółowe informacje przekażemy\n w późniejszym terminie.",
+  },
+} as const;
+
+type Props = {
+  lang: keyof typeof texts;
+};
+
+const Text = ({ lang }: Props) => {
   const isMobile = useMobile();
 
   return (
@@ -12,17 +31,11 @@ const Text = () => {
         <hr />
       </Fade>
       <Fade delay={isMobile ? 200 : REST_DELAY}>
-        <p className="-f14 -mb16">
-          Prosimy zarezerwujcie datę <br /> 8 września 2022 roku (czwartek).
-        </p>
-        <p className="-f14 -mb16">
-          Tego dnia powiemy sobie <br /> sakramentalne TAK!
-        </p>
-        <p className="-f14 ">Martyna i Maciek</p>
+        <p className="-f14 -mb16 -break">{texts[lang].first}</p>
+        <p className="-f14 -mb16 -break">{texts[lang].second}</p>
+        <p className="-f14">{texts[lang].third}</p>
         <hr />
-        <p className="-f14">
-          Szczegółowe informacje przekażemy <br /> w późniejszym terminie.
-        </p>
+        <p className="-f14 -break">{texts[lang].fourth}</p>
       </Fade>
     </div>
   );

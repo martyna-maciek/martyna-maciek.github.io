@@ -2,23 +2,50 @@ import Fade from "react-reveal/Fade";
 import { useMobile } from "../hooks/useMobile";
 import { REST_DELAY } from "./date";
 
-const Calendar = () => {
+const texts = {
+  pl: {
+    title: "Wrzesień 2022",
+    monday: "P",
+    tuesday: "W",
+    wednesday: "Ś",
+    thursday: "C",
+    friday: "P",
+    saturday: "S",
+    sunday: "N",
+  },
+  en: {
+    title: "September 2022",
+    monday: "M",
+    tuesday: "T",
+    wednesday: "W",
+    thursday: "T",
+    friday: "F",
+    saturday: "S",
+    sunday: "S",
+  },
+} as const;
+
+type Props = {
+  lang: keyof typeof texts;
+};
+
+const Calendar = ({ lang }: Props) => {
   const isMobile = useMobile();
 
   return (
     <div className="section c-calendarSec -pt80">
       <Fade delay={isMobile ? 300 : REST_DELAY}>
-        <p className="-f14 -mb16">Wrzesień 2022</p>
+        <p className="-f14 -mb16">{texts[lang].title}</p>
         <table>
           <tbody>
             <tr>
-              <th>P</th>
-              <th>W</th>
-              <th>Ś</th>
-              <th>C</th>
-              <th>P</th>
-              <th>S</th>
-              <th>N</th>
+              <th>{texts[lang].monday}</th>
+              <th>{texts[lang].tuesday}</th>
+              <th>{texts[lang].wednesday}</th>
+              <th>{texts[lang].thursday}</th>
+              <th>{texts[lang].friday}</th>
+              <th>{texts[lang].saturday}</th>
+              <th>{texts[lang].sunday}</th>
             </tr>
             <tr>
               <td></td>
