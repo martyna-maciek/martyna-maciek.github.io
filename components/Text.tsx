@@ -1,6 +1,6 @@
 import Fade from "react-reveal/Fade";
 import { useMobile } from "../hooks/useMobile";
-import { REST_DELAY } from "./date";
+import { REST_DELAY } from "./Date";
 
 const texts = {
   pl: {
