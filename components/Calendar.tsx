@@ -1,6 +1,8 @@
+import { useRef, useState } from "react";
 import Fade from "react-reveal/Fade";
+import Tada from "react-reveal/Tada";
 import { useMobile } from "../hooks/useMobile";
-import { REST_DELAY } from "./date";
+import { REST_DELAY } from "./Date";
 
 const texts = {
   pl: {
@@ -29,11 +31,31 @@ type Props = {
   lang: keyof typeof texts;
 };
 
+const CLICKS_TRIGGER_COUNT = 8;
+
 const Calendar = ({ lang }: Props) => {
+  const [isMemeVisible, setIsMemeVisible] = useState(false);
+  const clicksCount = useRef(0);
+
   const isMobile = useMobile();
 
   return (
     <div className="section c-calendarSec -pt80">
+      <div className={`meme-wrapper ${isMemeVisible ? "-visible" : ""}`}>
+        <Fade when={isMemeVisible} duration={200}>
+          <Tada when={isMemeVisible} delay={200}>
+            <div className="img-wrapper">
+              <img
+                src="/images/meme.png"
+                onClick={() => {
+                  setIsMemeVisible(false);
+                }}
+              />
+            </div>
+          </Tada>
+        </Fade>
+      </div>
+
       <Fade delay={isMobile ? 300 : REST_DELAY}>
         <p className="-f14 -mb16">{texts[lang].title}</p>
         <table>
@@ -61,7 +83,16 @@ const Calendar = ({ lang }: Props) => {
               <td>6</td>
               <td>7</td>
               <td>
-                <div className="c-wedding">
+                <div
+                  className="c-wedding"
+                  onClick={() => {
+                    clicksCount.current += 1;
+                    if (clicksCount.current === CLICKS_TRIGGER_COUNT) {
+                      setIsMemeVisible(true);
+                      clicksCount.current = 0;
+                    }
+                  }}
+                >
                   <img src="/images/rings.png" />
                 </div>
               </td>

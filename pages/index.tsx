@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useLayoutEffect } from "react";
-import Calendar from "../components/calendar";
-import Date from "../components/date";
-import Text from "../components/text";
+import Calendar from "../components/Calendar";
+import Date from "../components/Date";
+import Text from "../components/Text";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
