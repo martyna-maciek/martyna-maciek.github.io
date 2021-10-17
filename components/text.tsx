@@ -10,10 +10,10 @@ const texts = {
     fourth: "Szczegółowe informacje przekażemy\n w późniejszym terminie.",
   },
   en: {
-    first: "Prosimy zarezerwujcie datę\n 8 września 2022 roku (czwartek).",
-    second: "Tego dnia powiemy sobie\n sakramentalne TAK!",
-    third: "Martyna i Maciek",
-    fourth: "Szczegółowe informacje przekażemy\n w późniejszym terminie.",
+    first: "Please reserve the date for\n September 8, 2022 (Thursday).",
+    second: "On this day, we will say\n to each other I DO!",
+    third: "Martyna and Maciek",
+    fourth: "We'll provide detailed\n information at a later date.",
   },
 } as const;
 
