@@ -9,7 +9,14 @@ const Home: NextPage = () => {
     <div className="container">
       <Head>
         <title>💒 💍 💮</title>
-        <meta name="description" content="Save the date!" />
+        <meta
+          name="description"
+          property="og:description"
+          content="Save the date!"
+        />
+        <link rel="icon" href="./images/favicon.ico" />
+        <meta property="og:title" content="💒 💍 💮" />
+        <meta property="og:image" content="/images/og.jpg" />
         <link rel="icon" href="./images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
