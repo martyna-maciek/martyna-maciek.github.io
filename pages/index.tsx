@@ -4,8 +4,12 @@ import { useLayoutEffect } from "react";
 import Calendar from "../components/calendar";
 import Date from "../components/date";
 import Text from "../components/text";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+  const lang = (router.query.lang || "pl") as "pl" | "en";
+
   useLayoutEffect(() => {
     const body = document.querySelector("body");
 
@@ -42,11 +46,11 @@ const Home: NextPage = () => {
       <main className="main">
         <div className="row">
           <div className="col">
-            <Date lang="pl" />
+            <Date lang={lang} />
           </div>
           <div className="col">
-            <Text lang="pl" />
-            <Calendar lang="pl" />
+            <Text lang={lang} />
+            <Calendar lang={lang} />
           </div>
         </div>
       </main>
